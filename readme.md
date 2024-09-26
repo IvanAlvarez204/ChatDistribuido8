@@ -2,6 +2,8 @@
 
 Elaborado por:
 1. Iván Jared Álvarez De Uña
+2. Kevin Eduardo Peralta Diaz
+3. Tania Lizeth Tavera Alanis
 
 ### Módulo `gen_server`
 
