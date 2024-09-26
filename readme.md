@@ -3,7 +3,7 @@
 Elaborado por:
 1. Iván Jared Álvarez De Uña
 
-### Módulo gen_server
+### Módulo `gen_server`
 
 El módulo `chat_server` implementa el comportamiento de un `gen_server`, un patrón estándar en Erlang para construir servidores genéricos.
 
@@ -15,3 +15,9 @@ El uso de `gen_server` simplifica la implementación de servidores concurrentes 
 
 ### Gestión con `global`
 Los módulos hacen uso del sistema de nombres globales de Erlang para que los clientes puedan encontrar y comunicarse con el servidor de chat desde cualquier nodo en un sistema distribuido. La función `global:register_name/2` asegura que el servidor esté registrado bajo un nombre conocido globalmente, lo que permite a los clientes referirse a este servidor utilizando `{global, chat_server}` en sus llamadas.
+
+### Estado del Servidor (`state`)
+El servidor utiliza un registro definido como `#state{}` para gestionar tanto la lista de usuarios conectados como los mensajes. Este registro permite llevar un control estructurado de las entidades importantes del sistema (usuarios y mensajes), asegurando una gestión eficiente y consistente del estado.
+
+- La función `handle_call/3` actualiza el estado del servidor según las acciones solicitadas (agregar/eliminar usuarios).
+- `handle_cast/2` añade nuevos mensajes al historial de chat y los muestra en la consola del servidor.
