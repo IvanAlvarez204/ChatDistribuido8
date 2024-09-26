@@ -21,3 +21,18 @@ El servidor utiliza un registro definido como `#state{}` para gestionar tanto la
 
 - La función `handle_call/3` actualiza el estado del servidor según las acciones solicitadas (agregar/eliminar usuarios).
 - `handle_cast/2` añade nuevos mensajes al historial de chat y los muestra en la consola del servidor.
+
+### Características
+- **Distribución y Nodosa**: Erlang facilita la creación y comunicación entre procesos en diferentes nodos de una red distribuida, permitiendo la escalabilidad horizontal de sistemas como servidores de chat.
+
+- **Concurrencia y Paralelismo**: Cada cliente y servidor en Erlang es un proceso independiente. Esto permite manejar múltiples usuarios simultáneamente, evitando bloqueos y optimizando el rendimiento.
+
+- **Tolerancia a Fallos**: Erlang está diseñado para sistemas robustos, donde los procesos fallidos pueden ser reiniciados automáticamente sin afectar al sistema global, manteniendo la estabilidad y continuidad del servicio.
+
+### Experiencias y dificultades
+
+- **No es un lenguaje muy popular**.
+
+- **Variaciones entre versiones**.
+
+- **Sinatxis particular**.
